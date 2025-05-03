@@ -1,6 +1,7 @@
 package com.ojasx.devpick.CardsList
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -26,6 +27,7 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.ojasx.devpick.ui.theme.Coral
 import com.ojasx.devpick.ui.theme.magenta
 import com.ojasx.devpick.ui.theme.peach
 
@@ -34,7 +36,16 @@ import com.ojasx.devpick.ui.theme.peach
 fun SecondScreen() {
 
     val listOfCards = listOf<@Composable () -> Unit>(
-        { WebCard() }
+        { AICard() },
+        { WebCard() },
+        { AppCard() },
+        { GameDevCard() },
+        { MLCard() },
+        { CloudCard() },
+        { CybersecurityCard() },
+        { DSCard() },
+        { BlockChainCard() },
+
     )
 
     Box(
@@ -45,6 +56,9 @@ fun SecondScreen() {
                     colors = listOf(peach, magenta)
                 )
             )
+            .border(8.dp, Coral)
+            .padding(1.dp)
+
     ) {
         Column(
             modifier = Modifier.fillMaxSize(),
