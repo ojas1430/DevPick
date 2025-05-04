@@ -1,4 +1,5 @@
-package com.ojasx.devpick.WebScreen.DB
+package com.ojasx.devpick.TechStackScreens.WebScreen.DB
+
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size
@@ -20,14 +21,16 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.text.font.FontWeight
+import androidx.navigation.NavController
 
-@Preview
 @Composable
-fun MongoDbCard(modifier: Modifier = Modifier) {
+fun MySqlCard(navController: NavController) {
     Row (modifier = Modifier.fillMaxSize()){
         Card(
             modifier = Modifier.size(150.dp)
-                .clickable(onClick = {})
+                .clickable(onClick = {
+                    navController.navigate("MySqlInfoScreen")
+                })
             ,
             elevation = CardDefaults.cardElevation(
                 defaultElevation = 15.dp,
@@ -46,7 +49,7 @@ fun MongoDbCard(modifier: Modifier = Modifier) {
                     ),
                 contentAlignment = Alignment.Center
             ) {
-                Text("HTML",
+                Text("MySql",
                     style = TextStyle(
                         fontSize = 16.sp,
                         fontWeight = FontWeight.Bold

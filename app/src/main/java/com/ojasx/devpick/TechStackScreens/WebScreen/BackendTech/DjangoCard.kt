@@ -1,4 +1,5 @@
-package com.ojasx.devpick.WebScreen.FrontEndTech
+package com.ojasx.devpick.TechStackScreens.WebScreen.BackendTech
+
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size
@@ -23,7 +24,7 @@ import androidx.compose.ui.text.font.FontWeight
 
 @Preview
 @Composable
-fun JsCard(modifier: Modifier = Modifier) {
+fun DjangoCard(modifier: Modifier = Modifier) {
     Row (modifier = Modifier.fillMaxSize()){
         Card(
             modifier = Modifier.size(150.dp)
@@ -46,7 +47,7 @@ fun JsCard(modifier: Modifier = Modifier) {
                     ),
                 contentAlignment = Alignment.Center
             ) {
-                Text("HTML",
+                Text("Django",
                     style = TextStyle(
                         fontSize = 16.sp,
                         fontWeight = FontWeight.Bold

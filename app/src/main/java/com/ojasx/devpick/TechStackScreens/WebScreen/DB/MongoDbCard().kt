@@ -1,4 +1,4 @@
-package com.ojasx.devpick.WebScreen.FrontEndTech
+package com.ojasx.devpick.TechStackScreens.WebScreen.DB
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size
@@ -23,7 +23,7 @@ import androidx.compose.ui.text.font.FontWeight
 
 @Preview
 @Composable
-fun HtmlCard(modifier: Modifier = Modifier) {
+fun MongoDbCard(modifier: Modifier = Modifier) {
     Row (modifier = Modifier.fillMaxSize()){
         Card(
             modifier = Modifier.size(150.dp)
@@ -46,7 +46,7 @@ fun HtmlCard(modifier: Modifier = Modifier) {
                     ),
                 contentAlignment = Alignment.Center
             ) {
-                Text("HTML",
+                Text("MongoDbCard",
                     style = TextStyle(
                         fontSize = 16.sp,
                         fontWeight = FontWeight.Bold

@@ -1,4 +1,4 @@
-package com.ojasx.devpick.WebScreen
+package com.ojasx.devpick.TechStackScreens.WebScreen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -27,40 +27,40 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
-import com.ojasx.devpick.WebScreen.BackendTech.DjangoCard
-import com.ojasx.devpick.WebScreen.DB.MongoDbCard
-import com.ojasx.devpick.WebScreen.DB.MySqlCard
-import com.ojasx.devpick.WebScreen.FrontEndTech.CssCard
-import com.ojasx.devpick.WebScreen.FrontEndTech.HtmlCard
-import com.ojasx.devpick.WebScreen.FrontEndTech.JsCard
+import com.ojasx.devpick.TechStackScreens.WebScreen.BackendTech.DjangoCard
+import com.ojasx.devpick.TechStackScreens.WebScreen.DB.MongoDbCard
+import com.ojasx.devpick.TechStackScreens.WebScreen.DB.MySqlCard
+import com.ojasx.devpick.TechStackScreens.WebScreen.FrontEndTech.CssCard
+import com.ojasx.devpick.TechStackScreens.WebScreen.FrontEndTech.HtmlCard
+import com.ojasx.devpick.TechStackScreens.WebScreen.FrontEndTech.JsCard
 import com.ojasx.devpick.WebScreen.FrontEndTech.NodeJsCard
 import com.ojasx.devpick.ui.theme.Coral
 import com.ojasx.devpick.ui.theme.magenta
 import com.ojasx.devpick.ui.theme.peach
-import android.os.Bundle
-import android.widget.ImageView
-import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.foundation.layout.size
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.res.painterResource
+import androidx.navigation.NavController
 import com.ojasx.devpick.R
 
 
 
-@Preview
+
 @Composable
-fun CardsOfWebDev(modifier: Modifier = Modifier) {
+fun CardsOfWebDev(navController: NavController) {
     val frontendCards = listOf<@Composable () -> Unit>(
-        { HtmlCard() }, { CssCard() }, { JsCard() }
+        { HtmlCard(navController) },
+        { CssCard() },
+        { JsCard() }
     )
 
     val backendCards = listOf<@Composable () -> Unit>(
-        { NodeJsCard() }, { DjangoCard() }
+        { NodeJsCard(navController) },
+        { DjangoCard() }
     )
 
     val databaseCards = listOf<@Composable () -> Unit>(
-        { MySqlCard() }, { MongoDbCard() }
+        { MySqlCard(navController) },
+        { MongoDbCard() }
     )
 
     val imagelist = listOf(R.drawable.upward)

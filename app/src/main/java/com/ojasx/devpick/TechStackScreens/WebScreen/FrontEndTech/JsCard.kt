@@ -1,5 +1,4 @@
-package com.ojasx.devpick.WebScreen.DB
-
+package com.ojasx.devpick.TechStackScreens.WebScreen.FrontEndTech
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.size
@@ -24,7 +23,7 @@ import androidx.compose.ui.text.font.FontWeight
 
 @Preview
 @Composable
-fun MySqlCard(modifier: Modifier = Modifier) {
+fun JsCard(modifier: Modifier = Modifier) {
     Row (modifier = Modifier.fillMaxSize()){
         Card(
             modifier = Modifier.size(150.dp)
@@ -47,7 +46,7 @@ fun MySqlCard(modifier: Modifier = Modifier) {
                     ),
                 contentAlignment = Alignment.Center
             ) {
-                Text("HTML",
+                Text("JavaScript",
                     style = TextStyle(
                         fontSize = 16.sp,
                         fontWeight = FontWeight.Bold
