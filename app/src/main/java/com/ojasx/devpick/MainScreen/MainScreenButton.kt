@@ -18,11 +18,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 
 
-@Preview
+
 @Composable
-fun MainScreenButton() {
+fun MainScreenButton(navController: NavController) {
     Column(
         modifier = Modifier.fillMaxSize().padding(bottom = 120.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -31,7 +32,9 @@ fun MainScreenButton() {
 
 
         Button(
-            onClick = {},
+            onClick = {
+                navController.navigate("SecondScreen")
+            },
             colors = ButtonDefaults.buttonColors(
                 containerColor = Color(0xFFB3316A),
                 contentColor = Color.White,

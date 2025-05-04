@@ -27,17 +27,18 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.ojasx.devpick.ui.theme.Coral
 import com.ojasx.devpick.ui.theme.magenta
 import com.ojasx.devpick.ui.theme.peach
 
-@Preview
+
 @Composable
-fun SecondScreen() {
+fun SecondScreen(navController: NavController) {
 
     val listOfCards = listOf<@Composable () -> Unit>(
         { AICard() },
-        { WebCard() },
+        { WebCard(navController) },
         { AppCard() },
         { GameDevCard() },
         { MLCard() },

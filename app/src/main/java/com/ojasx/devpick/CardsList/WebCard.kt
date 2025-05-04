@@ -38,20 +38,24 @@ import androidx.compose.ui.unit.sp
 import android.widget.ImageView
 import android.graphics.drawable.Drawable
 import androidx.compose.ui.res.painterResource
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.ojasx.devpick.R
 
 
 
 
 
-@Preview
+
 @Composable
-fun WebCard() {
+fun WebCard(navController: NavController) {
     Card(
         modifier = Modifier
             .fillMaxSize()
             .padding(8.dp)
-            .clickable(onClick = {}),
+            .clickable(onClick = {
+                navController.navigate("WebCard")
+            }),
         shape = CircleShape,
         elevation = CardDefaults.cardElevation(
             defaultElevation = 15.dp,

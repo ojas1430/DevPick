@@ -14,17 +14,19 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Shadow
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 
-@Preview(showBackground = true)
 @Composable
-fun MainScreen() {
+fun MainScreen(navController: NavController) {
     val peach = Color(0xFFFFAA85)
     val magenta = Color(0xFFB3315F)
 
@@ -57,7 +59,7 @@ fun MainScreen() {
                         fontSize = 45.sp,
                         fontWeight = FontWeight.Bold,
                         fontFamily = FontFamily.Monospace,
-                        drawStyle = Stroke(width = 10f) // BOLDER outline
+                        drawStyle = Stroke(width = 10f)
                     )
                 )
 
@@ -72,10 +74,24 @@ fun MainScreen() {
                     )
                 )
             }
+            Spacer(Modifier.height(20.dp))
+
+            Text("Pick Smarter, Code Better!",
+                style = TextStyle(
+                    fontSize = 20.sp,
+                    fontWeight = FontWeight.Bold,
+                    fontFamily = FontFamily.Monospace,
+                    shadow = Shadow(
+                        Color.Yellow
+                ),
+
+                ),
+                modifier = Modifier.align(Alignment.CenterHorizontally)
+            )
         }
     }
 
 
-MainScreenButton()
+MainScreenButton(navController)
 }
 
