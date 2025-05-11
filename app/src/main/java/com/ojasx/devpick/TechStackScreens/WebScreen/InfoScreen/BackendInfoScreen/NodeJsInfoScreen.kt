@@ -1,4 +1,4 @@
-package com.ojasx.devpick.TechStackScreens.WebScreen.InfoScreen
+package com.ojasx.devpick.TechStackScreens.WebScreen.InfoScreen.BackendInfoScreen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background

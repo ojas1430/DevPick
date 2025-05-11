@@ -49,7 +49,7 @@ import com.ojasx.devpick.R
 fun CardsOfWebDev(navController: NavController) {
     val frontendCards = listOf<@Composable () -> Unit>(
         { HtmlCard(navController) },
-        { CssCard() },
+        { CssCard(navController) },
         { JsCard() }
     )
 

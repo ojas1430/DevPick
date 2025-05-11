@@ -8,9 +8,10 @@ import androidx.navigation.compose.rememberNavController
 import com.ojasx.devpick.CardsList.SecondScreen
 import com.ojasx.devpick.MainScreen.MainScreen
 import com.ojasx.devpick.TechStackScreens.WebScreen.CardsOfWebDev
-import com.ojasx.devpick.TechStackScreens.WebScreen.InfoScreen.HtmlInfoScreen
+import com.ojasx.devpick.TechStackScreens.WebScreen.InfoScreen.FrontEndInfoScreen.CssInfoScreen
+import com.ojasx.devpick.TechStackScreens.WebScreen.InfoScreen.FrontEndInfoScreen.HtmlInfoScreen
 import com.ojasx.devpick.TechStackScreens.WebScreen.InfoScreen.MysqlInfoScreen
-import com.ojasx.devpick.TechStackScreens.WebScreen.InfoScreen.NodeJsInfoScreen
+import com.ojasx.devpick.TechStackScreens.WebScreen.InfoScreen.BackendInfoScreen.NodeJsInfoScreen
 
 @Composable
 fun Navigation(modifier: Modifier = Modifier) {
@@ -34,6 +35,9 @@ fun Navigation(modifier: Modifier = Modifier) {
         }
         composable("MySqlInfoScreen") {
             MysqlInfoScreen(navController)
+        }
+        composable("CssInfoScreen")  {
+            CssInfoScreen(navController)
         }
 
     }

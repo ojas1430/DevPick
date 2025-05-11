@@ -20,14 +20,18 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.text.font.FontWeight
+import androidx.navigation.NavController
+import com.ojasx.devpick.TechStackScreens.WebScreen.InfoScreen.FrontEndInfoScreen.CssInfoScreen
 
-@Preview
+
 @Composable
-fun CssCard(modifier: Modifier = Modifier) {
+fun CssCard(navController: NavController) {
     Row (modifier = Modifier.fillMaxSize()){
         Card(
             modifier = Modifier.size(150.dp)
-                .clickable(onClick = {})
+                .clickable(onClick = {
+                    navController.navigate("CssInfoScreen")
+                })
             ,
             elevation = CardDefaults.cardElevation(
                 defaultElevation = 15.dp,
